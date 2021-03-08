@@ -1,0 +1,18 @@
+<div class="m-flex m-flex-v-align-center m-padding-left-s">
+  <div>
+    <a routerLink="/">
+      Mehyar Sawas-Donauer
+    </a>
+  </div>
+  <div class="m-padding-left-s">
+    <button mat-button [matMenuTriggerFor]="containersMenu">
+      Containers
+    </button>
+    <mat-menu #containersMenu>
+      <menu mat-menu-item routerLink="Containers/SplitContainer">
+        Split Container
+      </menu>
+    </mat-menu>
+  </div>
+</div>
+

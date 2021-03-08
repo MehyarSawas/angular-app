@@ -1,0 +1,72 @@
+/* global tags styles */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* variables */
+
+:root {
+  /* colors */
+  --primary-color: crimson;
+  --secondary-color: dimgrey;
+  /* z-index */
+  --z-index-10: 10;
+}
+
+/* color classes */
+
+.m-bg-color-red {
+  background: var(--primary-color);
+}
+.m-bg-color-grey {
+  background: var(--secondary-color);
+}
+
+/* Flex classes */
+.m-flex {
+  display: flex;
+}
+
+.m-flex-v-align-center {
+  align-items: center;
+}
+
+.m-flex-align-center {
+  justify-content: center;
+}
+
+.m-flex-vertical {
+  flex-direction: column;
+}
+
+.m-width-full {
+  width: 100%;
+}
+
+.m-height-full {
+  height: 100%;
+}
+
+.m-height-full-vh {
+  height: 100vh;
+}
+
+.m-stretch {
+  width: 100%;
+  height: 100%;
+}
+
+.m-flex-grow {
+  flex-grow: 1;
+}
+
+/* Spacing classes */
+.m-padding-left-s {
+  padding-left: .5rem;
+}

@@ -1,0 +1,11 @@
+.m-app-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-app-header {
+  z-index: var(--z-index-10);
+  background: #fff;
+}

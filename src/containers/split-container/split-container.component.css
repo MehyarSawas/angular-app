@@ -1,0 +1,29 @@
+.m-resize-handle-vertical {
+  width: 5px;
+  height: 100%;
+  cursor: ew-resize;
+  z-index: 1;
+  transition: box-shadow .5s;
+  background: #fff;
+  user-select: none;
+}
+
+.m-resize-handle-horizontal {
+  height: 5px;
+  width: 100%;
+  cursor: ns-resize;
+  z-index: 1;
+  transition: box-shadow .5s;
+  background: #fff;
+  user-select: none;
+}
+
+.m-resize-handle-vertical:hover {
+  box-shadow: 0 0 10px 0 #000000d4;
+  width: 10px;
+}
+
+.m-resize-handle-horizontal:hover {
+  box-shadow: 0 0 10px 0 #000000d4;
+  height: 10px;
+}
