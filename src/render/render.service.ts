@@ -1,4 +1,11 @@
-import {Compiler, ComponentFactory, ComponentFactoryResolver, Injectable, ViewContainerRef} from '@angular/core';
+import {
+  Compiler,
+  ComponentFactory,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Injectable,
+  ViewContainerRef
+} from '@angular/core';
 import {ModulesFactoryService} from './modules-factory.service';
 
 @Injectable({
@@ -14,13 +21,14 @@ export class RenderService {
   /**
    * add a dynamic component to the host container
    */
-  public async renderComponent(module: string, componentName: string, host: ViewContainerRef) {
+  public async renderComponent(module: string, componentName: string, host: ViewContainerRef): Promise<ComponentRef<any>> {
     const factory: ComponentFactory<any> | undefined = await this.getComponentFactory(module, componentName);
     if (!factory) {
       throw new Error(`could not find factory for ${componentName}`);
     }
-    const componentRef = host.createComponent(factory, 0, host.injector);
+    const componentRef: ComponentRef<any> = host.createComponent(factory, 0, host.injector);
     componentRef.changeDetectorRef.detectChanges();
+    return componentRef;
   }
 
   /**

@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SplitContainerComponent} from './split-container/split-container.component';
-import {ContainersRendererComponent} from './containers-renderer/containers-renderer.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     SplitContainerComponent,
-    ContainersRendererComponent,
   ],
   exports: [
     SplitContainerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule
   ]
 })
 export class ContainersModule {
