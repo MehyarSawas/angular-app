@@ -1,6 +1,5 @@
 <div #containerE [class.m-flex-vertical]="splitDirection == 'horizontal'" class="m-flex m-stretch">
-  <div #leftCellE class="m-bg-color-red m-flex-grow"></div>
+  <div #leftCellE class="m-bg-color-primary m-flex-grow"></div>
   <div #handleE (mousedown)="handleResize()" [class.m-resize-handle-vertical]="splitDirection == 'vertical'" [class.m-resize-handle-horizontal]="splitDirection == 'horizontal'"></div>
-  <div #rightCellE class="m-bg-color-grey m-flex-grow"></div>
+  <div #rightCellE class="m-bg-color-secondary m-flex-grow"></div>
 </div>
-
