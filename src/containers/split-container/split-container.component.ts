@@ -1,4 +1,5 @@
 import {Component, ElementRef, Input, NgZone, Renderer2, ViewChild} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'm-split-container',
@@ -21,7 +22,9 @@ export class SplitContainerComponent {
   @ViewChild('rightCellE') private rightCellE!: ElementRef;
 
   constructor(private zone: NgZone,
+              private title: Title,
               private renderer: Renderer2) {
+    title.setTitle('Split Container');
   }
 
   /**
