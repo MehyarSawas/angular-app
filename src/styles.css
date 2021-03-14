@@ -21,11 +21,20 @@ body {
 
 /* color classes */
 
-.m-bg-color-red {
-  background: var(--primary-color);
+.m-bg-color-white {
+  background: #fff !important;
 }
-.m-bg-color-grey {
-  background: var(--secondary-color);
+.m-bg-color-primary {
+  background: var(--primary-color) !important;
+}
+.m-text-color-primary {
+  color: var(--primary-color) !important;
+}
+.m-bg-color-secondary {
+  background: var(--secondary-color) !important;
+}
+.m-text-color-secondary {
+  color: var(--secondary-color) !important;
 }
 
 /* Flex classes */
@@ -66,7 +75,42 @@ body {
   flex-grow: 1;
 }
 
+/* state classes */
+.m-active {
+  font-weight: 500 !important;
+  color: var(--primary-color) !important;
+}
+
 /* Spacing classes */
 .m-padding-left-s {
   padding-left: .5rem;
+}
+.m-padding-s {
+  padding: .5rem;
+}
+
+/* interaction */
+.m-image-link:hover {
+  box-shadow: 0 0 7px 2px #555;
+  cursor: pointer;
+}
+
+/* override mat classes */
+
+.mat-menu-content {
+  padding: 0 !important;
+}
+.mat-menu-panel {
+  background: #fff;
+  min-height: 0 !important;
+}
+.mat-menu-panel button {
+  color: initial;
+}
+.mat-primary {
+  color: var(--primary-color) !important;
+}
+.mat-card {
+  background: #fff;
+  color: initial;
 }
